@@ -1,0 +1,11 @@
+<div class="tv-show">
+  <loader-donut *ngIf="loadingInfo"></loader-donut>
+  <button class='btn btn--close-show' routerLink="/">
+    x
+  </button>
+  
+  <h2 class="tv-show__title">
+    {{ showInfo?.Title }}
+  </h2>
+  
+</div>
