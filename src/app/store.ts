@@ -1,19 +1,17 @@
-import { tassign } from 'tassign'; 
+import { tassign } from 'tassign';
 import { combineReducers } from 'redux';
 
 /** ANY OTHER STORE GOES HERE */
-import { IPlaceholderState, PLACEHOLDER_INIT_STATE, placeholderReducer } from './components/placeholder/store';
-import { AnotherPlaceholderReducer } from './components/another-placeholder/store';
+import { tvShowReducer, IShowState } from './components/show/store';
 
 export interface IAppState {
-  placeholder: IPlaceholderState;
+  tvShow: IShowState;
 }
 
 export const INITIAL_STATE = {
-  placeholder: PLACEHOLDER_INIT_STATE,
-}
+  tvShow: null,
+};
 
 export const rootReducer = combineReducers<IAppState>({
-  placeholder: placeholderReducer,
-  anotherPlaceholder: AnotherPlaceholderReducer
+  tvShow: tvShowReducer,
 });

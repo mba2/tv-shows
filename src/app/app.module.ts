@@ -17,10 +17,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShowComponent } from './components/show/show.component';
 import { LoaderDonutComponent } from './components/loader-donut/loader-donut.component';
-
-import { PlaceholderComponent } from './components/placeholder/placeholder.component';
-import { AnotherPlaceholderComponent } from './components/another-placeholder/another-placeholder.component';
 import { LoaderTvShowComponent } from './components/loader-tv-show/loader-tv-show.component';
+
 
 @NgModule({
   declarations: [
@@ -28,8 +26,6 @@ import { LoaderTvShowComponent } from './components/loader-tv-show/loader-tv-sho
     HomeComponent,
     ShowComponent,
     LoaderDonutComponent,
-    PlaceholderComponent,
-    AnotherPlaceholderComponent,
     LoaderTvShowComponent
   ],
   imports: [

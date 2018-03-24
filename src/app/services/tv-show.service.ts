@@ -18,8 +18,8 @@ export class TvShowService {
   getInfo() {
     return Promise.all(
       [
-        this.http.get(this.urlShow).delay(1500).toPromise(),
-        this.http.get(this.urlSeasons).delay(1500).toPromise()
+        this.http.get(this.urlShow).delay(0).toPromise(),
+        this.http.get(this.urlSeasons).delay(0).toPromise()
       ]);
   }
 }
