@@ -1,0 +1,19 @@
+.loader {
+  position: absolute;
+  display: flex;
+  width: 100vw;  
+  height: 100vh;  
+  background: linear-gradient(to bottom, #003067 0%,#506679 51%,#002542 100%);
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+p {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight:bold;
+
+  letter-spacing: 2px;
+}

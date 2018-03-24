@@ -1,0 +1,46 @@
+  //CLEARFIX
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin defaultLetterSpacing {
+  letter-spacing: 2.5px;
+}
+
+@mixin heeboFont {
+  font-family: 'Heebo', sans-serif;
+}
+
+@mixin montSerratFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+//TRANSFORMS
+@mixin transform($type) {
+  -webkit-transform: $type;
+  -ms-transform: $type;
+  transform: $type;
+}
+
+// TRANSITIONS
+@function customTrans($propName, $time: .3s, $effect: ease-in-out){
+  @return $propName $time $effect;
+}
+
+
+//BREAKPOINTS
+
+@mixin breakpoint($minOrMax, $width , $media: "screen"){
+    //REMOVE ONE PIXEL IF A "max" UNIT IS DESIRED
+    @if $minOrMax == max { $width : $width - 1; }
+
+    @media #{$media} AND (#{$minOrMax}-width : $width) {
+        @content;
+    }
+}
+

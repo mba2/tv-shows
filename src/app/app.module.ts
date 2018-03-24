@@ -20,6 +20,7 @@ import { LoaderDonutComponent } from './components/loader-donut/loader-donut.com
 
 import { PlaceholderComponent } from './components/placeholder/placeholder.component';
 import { AnotherPlaceholderComponent } from './components/another-placeholder/another-placeholder.component';
+import { LoaderTvShowComponent } from './components/loader-tv-show/loader-tv-show.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AnotherPlaceholderComponent } from './components/another-placeholder/an
     ShowComponent,
     LoaderDonutComponent,
     PlaceholderComponent,
-    AnotherPlaceholderComponent
+    AnotherPlaceholderComponent,
+    LoaderTvShowComponent
   ],
   imports: [
     BrowserModule,

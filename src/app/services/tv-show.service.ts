@@ -1,3 +1,4 @@
+import { delay } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -15,10 +16,10 @@ export class TvShowService {
   constructor(private http: HttpClient) { }
 
   getInfo() {
-    return this.http.get(this.urlShow)
-    .map(response => response)
-    .delay(2500)
-    .toPromise()
-    .catch();
+    return Promise.all(
+      [
+        this.http.get(this.urlShow).delay(1500).toPromise(),
+        this.http.get(this.urlSeasons).delay(1500).toPromise()
+      ]);
   }
 }

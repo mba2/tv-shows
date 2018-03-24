@@ -22,7 +22,7 @@ export class ShowComponent implements OnInit {
     this.service.getInfo()
     .then( (info) => {
       this.showInfo = info;
-      this.loadingInfo = false;
+      // this.loadingInfo = false;
     });
   }
 
