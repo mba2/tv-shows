@@ -18,6 +18,9 @@ import { HomeComponent } from './components/home/home.component';
 import { ShowComponent } from './components/show/show.component';
 import { LoaderDonutComponent } from './components/loader-donut/loader-donut.component';
 import { LoaderTvShowComponent } from './components/loader-tv-show/loader-tv-show.component';
+import { TabComponent } from './components/tab/tab.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { TabControllerComponent } from './components/tab-controller/tab-controller.component';
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { LoaderTvShowComponent } from './components/loader-tv-show/loader-tv-sho
     HomeComponent,
     ShowComponent,
     LoaderDonutComponent,
-    LoaderTvShowComponent
+    LoaderTvShowComponent,
+    TabComponent,
+    TabsComponent,
+    TabControllerComponent
   ],
   imports: [
     BrowserModule,

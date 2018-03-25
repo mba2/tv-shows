@@ -4,8 +4,57 @@
     x
   </button>
   
-  <h2 class="tv-show__title">
-    {{ showInfo?.Title }}
-  </h2>
-  
+  <header class="tv-show__header">
+    <h2 class="tv-show__title">
+        {{ title$ | async }}
+      </h2>
+      <div class="tv-show__quick-info">
+        <div class="tv-show__genres">
+          <div class="tv-show__genre" *ngFor="let genre of genres$ | async">
+            {{ genre.Title }}
+          </div>
+        </div>
+        <div class="tv-show__year">
+          {{ year$ | async }}
+        </div>
+      </div>
+  </header>
+
+  <main class="tv-show__body">
+    <aside class="tv-show__seasons-episodes">
+      <tab-controller>
+        <div *ngFor="let season of seasons$ | async">
+          
+          <tab class="tab" [title]="season.id">
+            <!-- {{ seasons.eps | json}} -->
+            <!-- <div class="episode" *ngFor="let episode of season.eps">
+               <div class="episode"> ep: {{ episode.ID }}</div> 
+            </div> -->
+          </tab>
+          <!-- {{season.id }} -->
+          <!-- <div class="episodes">
+            <div class="episode" *ngFor="let episode of season.eps">
+              {{ episode.ID}} 
+            </div>
+          </div> -->
+        </div>
+      </tab-controller>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <tab-controller>
+      <tab class="tab" [title]="'general'" [isActive]="true">
+        {{ synopsis$ | async }}
+      </tab>
+      <tab class="tab" [title]="'cast'">
+        <div *ngFor="let actor of cast$ | async">
+          <p class="actor">
+            {{actor.Name}}
+          </p>
+        </div>
+      </tab>  
+    </tab-controller>
+  </footer>
+
 </div>

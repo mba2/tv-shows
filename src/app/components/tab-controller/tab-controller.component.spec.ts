@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlaceholderComponent } from './placeholder.component';
+import { TabControllerComponent } from './tab-controller.component';
 
-describe('PlaceholderComponent', () => {
-  let component: PlaceholderComponent;
-  let fixture: ComponentFixture<PlaceholderComponent>;
+describe('TabControllerComponent', () => {
+  let component: TabControllerComponent;
+  let fixture: ComponentFixture<TabControllerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlaceholderComponent ]
+      declarations: [ TabControllerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PlaceholderComponent);
+    fixture = TestBed.createComponent(TabControllerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

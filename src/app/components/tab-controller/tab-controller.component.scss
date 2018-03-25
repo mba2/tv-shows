@@ -1,0 +1,8 @@
+.nav-tabs {
+
+  &__item {
+    &.is-active {
+      border-bottom: 1px solid green;
+    }
+  }
+}

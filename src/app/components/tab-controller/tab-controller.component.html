@@ -1,0 +1,9 @@
+
+<div class="nav-tabs">
+  <div class=nav-tabs__item *ngFor="let tab of tabs"  
+    (click)=toggleTab(tab) [class.is-active]='tab.isActive'>
+    {{ tab?.title}}
+  </div>
+</div>
+<!-- tabs : {{ tabs | async }} -->
+<ng-content></ng-content>

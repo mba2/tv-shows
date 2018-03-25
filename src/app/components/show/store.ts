@@ -24,7 +24,7 @@ class ShowActions {
   /**
    * @param episodes: array
   */
-  removeNullEpisodes(episodes): void {
+  removeNullEpisodes(episodes): any[] {
     return episodes.filter(episode => episode);
   }
 
@@ -51,15 +51,15 @@ class ShowActions {
   }
 
   loadShowInfo(): IShowState {
-    const [showInfo] = this.action.info;
-    let Episodes = this.action.info[1];
+    const [showInfo, rawEpisodes] = this.action.info;
     const {Cast, Genres, ID, Images, Synopsis, Title, Year} = showInfo;
     const Seasons = [];
+    let Episodes = [];
 
     /** REMOVE NULL EPISODE FROM THE RETURNED JSON */
-    Episodes = this.removeNullEpisodes(Episodes);
+    Episodes = this.removeNullEpisodes(rawEpisodes);
     /** INSERT EPISODES INTO THEIR SEASONS */
-    Episodes.map( episode => {
+    Episodes.forEach( episode => {
       if (episode) { this.addEpisodesToSeason(Seasons, episode); }
     });
 
