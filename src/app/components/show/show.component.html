@@ -1,4 +1,4 @@
-<div class="tv-show">
+<div class="tv-show" [ngStyle]="{'background-image': 'url(' + (background$ | async) + ')'}">
   <loader-tv-show *ngIf="loadingInfo"></loader-tv-show>
   <button class='btn btn--close-show' routerLink="/">
     x
@@ -10,13 +10,13 @@
       </h2>
       <div class="tv-show__quick-info">
         <div class="tv-show__genres">
-          <div class="tv-show__genre" *ngFor="let genre of genres$ | async">
-            {{ genre.Title }}
-          </div>
+          <span class="tv-show__genre" *ngFor="let genre of genres$ | async">
+            {{ genre.Title + ' / '}}  
+          </span>
         </div>
-        <div class="tv-show__year">
+        <span class="tv-show__year">
           {{ year$ | async }}
-        </div>
+        </span>
       </div>
   </header>
 
@@ -25,11 +25,11 @@
       <tab-controller>
         <div *ngFor="let season of seasons$ | async">
           
-          <tab class="tab" [title]="season.id">
-            <!-- {{ seasons.eps | json}} -->
-            <!-- <div class="episode" *ngFor="let episode of season.eps">
-               <div class="episode"> ep: {{ episode.ID }}</div> 
-            </div> -->
+          <tab class="tab" [title]="'T' + season.id">
+            <!-- {{ season.eps | json}} -->
+            <div class="episode" *ngFor="let episode of season.eps">
+               <div class="episode"> ep: {{ episode.Title }}</div> 
+            </div>
           </tab>
           <!-- {{season.id }} -->
           <!-- <div class="episodes">
@@ -42,16 +42,16 @@
     </aside>
   </main>
 
-  <footer class="footer">
+  <footer class="tv-show__footer">
     <tab-controller>
-      <tab class="tab" [title]="'general'" [isActive]="true">
+      <tab class="tab tab--general" [title]="'general'" [isActive]="true">
         {{ synopsis$ | async }}
       </tab>
-      <tab class="tab" [title]="'cast'">
+      <tab class="tab tab--cast" [title]="'cast'">
         <div *ngFor="let actor of cast$ | async">
-          <p class="actor">
+          <span class="actor">
             {{actor.Name}}
-          </p>
+          </span>
         </div>
       </tab>  
     </tab-controller>

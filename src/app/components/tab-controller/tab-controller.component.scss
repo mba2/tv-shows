@@ -1,8 +1,47 @@
-.nav-tabs {
+@mixin border-bottom($color) {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: $color;
+  left: 0;
+}
 
+.nav-tabs {
+  display: flex;
+  position: relative;
+
+  &:after {
+    @include border-bottom(#424242);
+    width: 100%;
+  }
+  
   &__item {
+    position: relative;
+    padding: 10px 20px 10px 0;
+    margin-right: 25px;
+    
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    &:after {
+      @include border-bottom(transparent);
+      will-change: background-color;
+      width: 100%;
+      z-index: 1;
+    } 
+
     &.is-active {
-      border-bottom: 1px solid green;
+      
+      &:after {
+        background-color: #358e61;
+      }
+      // border-bottom: 2px solid #149014;
+      font-weight: bold;
+
     }
+
   }
 }

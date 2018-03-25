@@ -11,28 +11,28 @@ import { TabComponent } from './../tab/tab.component';
 })
 
 export class TabControllerComponent implements OnInit, AfterContentInit, AfterViewInit {
-  // @ViewChildren(TabComponent) tabs:  QueryList<TabComponent>;
   @ContentChildren(TabComponent) tabs:  QueryList<TabComponent>;
-
 
   constructor(private cdr: ChangeDetectorRef) { }
 
   toggleTab(tab: TabComponent): void {
     console.log(tab);
     console.log(this.tabs);
-    this.tabs.forEach(e => e.isActive = false); 
+    this.tabs.forEach(e => e.isActive = false);
     tab.isActive = true;
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
-  ngAfterContentInit() { }
+
+  ngAfterContentInit() {
+    // this.tabs.changes.subscribe( () => {
+    //   this.tabs.first.isActive = true;
+    //   // this.cdr.detectChanges();
+    // });
+  }
   
   ngAfterViewInit() {
-      this.cdr.detectChanges();
-      this.tabs.changes.subscribe( () => {
-        console.log(this.tabs);
-      this.tabs.first.isActive = true;
-    });
+
   }
 }

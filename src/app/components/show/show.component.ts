@@ -24,6 +24,7 @@ export class ShowComponent implements OnInit {
 
   private loadingInfo = true;
 
+  @select(['tvShow', 'Images','Background']) background$;
   @select(['tvShow', 'Title']) title$;
   @select(['tvShow', 'Genres']) genres$;
   @select(['tvShow', 'Year']) year$;

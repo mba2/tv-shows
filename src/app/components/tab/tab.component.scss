@@ -1,0 +1,23 @@
+.tab__content {
+  padding-top:  15px;
+
+  &--cast {
+    display: flex;
+    
+    ::ng-deep {
+      .actor {
+        padding: 30px 40px;
+        height: 100%;
+        display: block;
+        background-color: #2b2a2a;
+        margin-right: 20px;
+        
+        color: #fff;
+      }
+    }
+  }
+  
+  &--general { 
+    line-height: 1.6;
+  }
+}

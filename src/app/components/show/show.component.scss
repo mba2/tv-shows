@@ -1,22 +1,95 @@
+/** VARIABLES */
+$headerHeight: 120px;
+$footerHeight: 170px;
+
 .tv-show {
   position: relative;
   width: 100vw;
   height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100vw;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.780392) 10%, rgba(0, 0, 0, 0.68) 30%, rgba(2, 2, 2, 0.97) 41%);
+  }
+
+  &__header,
+  &__body,
+  &__footer {
+    position: relative;
+    z-index: 1;
+  }
 
   &__header {
+    height: 120px;
+    padding: 25px 3vw;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+  }
+
+  &__genres {
+    display: inline-block;
+  }
+
+  &__genre,
+  &__year {
+    text-transform: uppercase;
+    color: gray;
+  }
+  
+  &__genre {
+
+  }
+
+  &__year {
+
     
   }
 
   &__body {
-
+    display: flex;
+    justify-content: flex-end;
+    height: calc(100% - #{$headerHeight} - #{$footerHeight});
   }
 
+  &__seasons-episodes {
+    flex: 0.3;
+
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+
+  &__footer {
+    height: calc(170px);
+    background: #0a0a0a;
+    padding: 20px 3vw;
+
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
   .btn {
 
     &--close-show {
       position: absolute;
-      top: 10px;
-      right: 30px;
+      top: 20px;
+      right: 3vw;
+      z-index: 1;
     }
   }
 }
