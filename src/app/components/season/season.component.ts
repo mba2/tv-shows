@@ -15,7 +15,6 @@ export class SeasonComponent implements OnInit {
   constructor() { }
 
   toggleEpisode(episode) {
-    console.log(episode);
     this.episodes.forEach(e => {
       if (e !== episode) { e.isActive = false; }
     });

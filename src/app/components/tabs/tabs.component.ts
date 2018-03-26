@@ -22,9 +22,7 @@ export class TabsComponent implements OnInit, AfterViewInit {
   constructor(private cdr: ChangeDetectorRef) { }
 
   toggleTab(tab: TabComponent): void {
-    console.log(tab);
     tab.isActive = !tab.isActive;
-    console.log(this.tabs);
   }
 
   ngOnInit() {

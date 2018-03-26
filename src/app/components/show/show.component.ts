@@ -22,7 +22,7 @@ import { LOAD_SHOW_INFO } from './actions';
 export class ShowComponent implements OnInit {
  
 
-  private loadingInfo = true;
+  public loadingInfo = true;
 
   @select(['tvShow', 'Images','Background']) background$;
   @select(['tvShow', 'Title']) title$;

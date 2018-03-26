@@ -14,21 +14,11 @@ export class EpisodeControllerComponent implements OnInit, AfterContentInit, Aft
 
   constructor() { }
 
-  // toggleTab(tab: EpisodeControllerComponent): void {
-  //   console.log(tab);
-  //   console.log(this.tabs);
-  //   this.tabs.forEach(e => e.isActive = false);
-  //   tab.isActive = true;
-  // }
 
   ngOnInit() {}
 
 
   ngAfterContentInit() {
-    // this.tabs.changes.subscribe( () => {
-    //   this.tabs.first.isActive = true;
-    //   // this.cdr.detectChanges();
-    // });
   }
   
   ngAfterViewInit() {

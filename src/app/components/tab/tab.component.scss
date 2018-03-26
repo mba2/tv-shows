@@ -22,3 +22,21 @@
     line-height: 1.6;
   }
 }
+
+::ng-deep {
+  .action-btns {
+    display: flex;
+  
+    &__btn {
+      width: 90px;
+      height: 70px;
+      cursor: pointer;
+
+      text-align: center;
+    }
+  }
+
+  .synopsis {
+    margin-left: 40px;
+  }
+}

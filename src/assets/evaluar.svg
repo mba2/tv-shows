@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="77px" height="77px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 140 140"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+    .str0 {stroke:#CCCCCC;stroke-width:5.46489}
+    .fil0 {fill:none}
+    .fil1 {fill:#CCCCCC}
+  </style>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0 str0" x="3" y="3" width="135" height="135" rx="1033" ry="1033"/>
+  <path class="fil0 str0" d="M43 100c19,-21 38,-23 57,0"/>
+  <rect class="fil1" x="24" y="55" width="9.96203" height="9.96203" rx="76" ry="76"/>
+  <rect class="fil1" x="111" y="55" width="9.96203" height="9.96203" rx="76" ry="76"/>
+ </g>
+</svg>

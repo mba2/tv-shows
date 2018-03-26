@@ -16,8 +16,6 @@ export class TabControllerComponent implements OnInit, AfterContentInit, AfterVi
   constructor(private cdr: ChangeDetectorRef) { }
 
   toggleTab(tab: TabComponent): void {
-    console.log(tab);
-    console.log(this.tabs);
     this.tabs.forEach(e => e.isActive = false);
     tab.isActive = true;
   }
@@ -26,10 +24,6 @@ export class TabControllerComponent implements OnInit, AfterContentInit, AfterVi
 
 
   ngAfterContentInit() {
-    // this.tabs.changes.subscribe( () => {
-    //   this.tabs.first.isActive = true;
-    //   // this.cdr.detectChanges();
-    // });
   }
   
   ngAfterViewInit() {
