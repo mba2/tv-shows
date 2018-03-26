@@ -46,14 +46,5 @@ export class ShowComponent implements OnInit {
       this.loadingInfo = false;
       this.store.dispatch({ type: LOAD_SHOW_INFO , info });
     });
-
-    // this.store.select(['tvShow', 'Title'])
-    //   .map(e => {
-    //     console.log(e);
-    //     this.title$ = e;
-    //   }).subscribe( (d) => {
-    //     console.log(d);
-    //   });
   }
-
 }

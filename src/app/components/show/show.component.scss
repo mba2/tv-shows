@@ -28,8 +28,8 @@ $footerHeight: 170px;
   }
 
   &__header {
-    height: 120px;
-    padding: 25px 3vw;
+    height: 70px;
+    padding: 25px 2vw;
   }
 
   &__title {
@@ -61,9 +61,9 @@ $footerHeight: 170px;
   }
 
   &__body {
-    height: calc(100vh - 170px - 120px);
     display: flex;
     justify-content: flex-end;
+    padding: 20px 2vw;
   }
 
   &__seasons-episodes {
@@ -90,8 +90,12 @@ $footerHeight: 170px;
 
     &--close-show {
       position: absolute;
-      top: 20px;
-      right: 3vw;
+      width: 20px;;
+      height: 20px;
+      background: transparent;
+      outline: none;
+      top: 40px;
+      right:  45px;
       z-index: 2;
       cursor: pointer;
     }

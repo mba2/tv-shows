@@ -1,9 +1,8 @@
 <div class="tv-show" [ngStyle]="{'background-image': 'url(' + (background$ | async) + ')'}">
   <loader-tv-show *ngIf="loadingInfo"></loader-tv-show>
   <button class='btn btn--close-show' routerLink="/">
-    x
-  </button>
-  
+    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="25px" height="25px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 10 10" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs> <style type="text/css"> .str0{stroke:#CCCCCC;stroke-width:0.537582}.fil0{fill:none}</style> </defs> <g id="Camada_x0020_1"> <metadata id="CorelCorpID_0Corel-Layer"/> <line class="fil0 str0" x1="0" y1="0" x2="10" y2="10"/> <line class="fil0 str0" x1="10" y1="0" x2="0" y2="10"/> </g> </svg>
+  </button>  
   <header class="tv-show__header">
     <h2 class="tv-show__title">
         {{ title$ | async }}
@@ -37,7 +36,20 @@
   <footer class="tv-show__footer">
     <tab-controller>
       <tab class="tab tab--general" [title]="'general'" [isActive]="true">
-        {{ synopsis$ | async }}
+        <div class="action-btns">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+        </div>
+        <div class="synopsis">
+          <h2>
+            SINOPSE
+          </h2>
+          <p>
+            {{ synopsis$ | async }}
+          </p>
+        </div>
       </tab>
       <tab class="tab tab--cast" [title]="'cast'">
         <div *ngFor="let actor of cast$ | async">
