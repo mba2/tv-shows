@@ -23,20 +23,12 @@
   <main class="tv-show__body">
     <aside class="tv-show__seasons-episodes">
       <tab-controller>
-        <div *ngFor="let season of seasons$ | async">
-          
-          <tab class="tab" [title]="'T' + season.id">
-            <!-- {{ season.eps | json}} -->
-            <div class="episode" *ngFor="let episode of season.eps">
-               <div class="episode"> ep: {{ episode.Title }}</div> 
-            </div>
+        <div *ngFor="let season of seasons$ | async; index as i">
+          <tab class="tab" [title]="'T' + season.id" [isActive]="i == 0">
+            <season class="season-container"
+              [seasonData]="season">
+            </season>
           </tab>
-          <!-- {{season.id }} -->
-          <!-- <div class="episodes">
-            <div class="episode" *ngFor="let episode of season.eps">
-              {{ episode.ID}} 
-            </div>
-          </div> -->
         </div>
       </tab-controller>
     </aside>

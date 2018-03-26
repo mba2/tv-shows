@@ -1,0 +1,7 @@
+:host(.season-container ) {
+  height: calc(100vh - 170px - 120px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px 0 15px;
+}    

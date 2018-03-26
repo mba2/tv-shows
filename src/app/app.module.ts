@@ -21,6 +21,9 @@ import { LoaderTvShowComponent } from './components/loader-tv-show/loader-tv-sho
 import { TabComponent } from './components/tab/tab.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { TabControllerComponent } from './components/tab-controller/tab-controller.component';
+import { EpisodeControllerComponent } from './components/episode-controller/episode-controller.component';
+import { EpisodeComponent } from './components/episode/episode.component';
+import { SeasonComponent } from './components/season/season.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { TabControllerComponent } from './components/tab-controller/tab-controll
     LoaderTvShowComponent,
     TabComponent,
     TabsComponent,
-    TabControllerComponent
+    TabControllerComponent,
+    EpisodeControllerComponent,
+    EpisodeComponent,
+    SeasonComponent
   ],
   imports: [
     BrowserModule,

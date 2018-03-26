@@ -1,0 +1,7 @@
+<episode
+  class="episode"
+  *ngFor="let episode of seasonData.eps" 
+  [episodeData]="episode"
+  (toggle)="toggleEpisode($event)">
+</episode>
+

@@ -1,11 +1,4 @@
-@mixin border-bottom($color) {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  background-color: $color;
-  left: 0;
-}
+@import '~app/smacss/base/mixins';
 
 .nav-tabs {
   display: flex;

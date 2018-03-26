@@ -1,0 +1,25 @@
+:host(home) {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}    
+
+h1 {
+  font-size: 40px;
+  margin: 20px 0;
+  text-transform: uppercase
+}
+
+button {
+  padding: 30px 50px;
+  border-radius: 20px;
+  background-color: #38bd3e;
+
+  font-size: 25px;
+  color: #FFF;
+  text-transform: uppercase;
+  cursor: pointer;
+}
